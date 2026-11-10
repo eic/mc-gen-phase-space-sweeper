@@ -1,0 +1,58 @@
+\par\medskip
+\noindent\begin{minipage}{\columnwidth}
+\centering\footnotesize
+\setlength{\tabcolsep}{2.4pt}
+\captionsetup{font=footnotesize}
+\captionof{table}{Where each generator's particles end up in pseudorapidity $\eta$, for the \emph{latest} sample of each configuration produced in the 26.07 campaign. $\bullet$: median sample has at least 0.5 particles per event; $\circ$: median at least 0.1, or at least 0.5 in a quarter of the samples.}
+\label{tab:generators-eta}
+\begin{tabularx}{\columnwidth}{@{}l>{\raggedright\arraybackslash}X*{6}{c}@{}}
+\toprule
+& & \multicolumn{6}{c}{Region ($\eta$ increases $\rightarrow$)} \\
+\cmidrule(l){3-8}
+Generator & Process & FB & Bwd & Bar & Fwd & B0 & FF \\
+\midrule
+\multicolumn{8}{@{}l}{\textit{Basic collisions ($e$+$p$)}}\\
+PYTHIA8        & Standard $ep$            &           & $\circ$   & $\bullet$ & $\bullet$ & $\circ$   & \\
+PYTHIA6-EIC    & SIDIS                    &           & $\circ$   & $\bullet$ & $\bullet$ & $\circ$   & $\bullet$ \\
+\addlinespace[3pt]
+\multicolumn{8}{@{}l}{\textit{Proton stays intact}}\\
+RAPGAP         & Diffraction              &           & $\bullet$ & $\bullet$ & $\bullet$ &           & $\bullet$ \\
+EpIC           & DVCS                     &           & $\bullet$ & $\circ$   &           &           & $\bullet$ \\
+lAger          & $J/\psi$                 &           & $\bullet$ & $\bullet$ & $\bullet$ &           & $\bullet$ \\
+eSTARlight     & $J/\psi$, $\Upsilon$ photoproduction & $\bullet$ &           & $\bullet$ & $\bullet$ &           & $\bullet$ \\
+\addlinespace[3pt]
+\multicolumn{8}{@{}l}{\textit{Pion and kaon structure}}\\
+DEMPgen        & Pion form factor         &           & $\bullet$ & $\circ$   & $\bullet$ &           & $\bullet$ \\
+eicMesonSFGen  & Kaon structure           &           &           & $\bullet$ &           & $\bullet$ & $\circ$ \\
+\addlinespace[3pt]
+\multicolumn{8}{@{}l}{\textit{Light ions}}\\
+BeAGLE         & $e$D: neutron structure  &           & $\bullet$ & $\bullet$ & $\bullet$ & $\circ$   & $\bullet$ \\
+BeAGLE         & $e\,^3$He: neutron spin  &           & $\bullet$ & $\bullet$ & $\bullet$ &           & $\bullet$ \\
+\addlinespace[3pt]
+\multicolumn{8}{@{}l}{\textit{Heavy ions: nuclear fragments}}\\
+BeAGLE         & $e$Au: DIS               &           & $\bullet$ & $\bullet$ & $\bullet$ & $\circ$   & $\bullet$ \\
+\addlinespace[3pt]
+\multicolumn{8}{@{}l}{\textit{Heavy ions: no fragments, no residual nucleus}}\\
+BeAGLE         & $e$Au: charm             &           & $\bullet$ & $\bullet$ & $\bullet$ & $\circ$   & $\circ$ \\
+BeAGLE         & $e$Au: incoherent VM     &           & $\bullet$ & $\bullet$ & $\bullet$ &           & $\bullet$ \\
+BeAGLE         & $e$Ag: DIS               &           & $\bullet$ & $\bullet$ & $\bullet$ & $\circ$   & $\circ$ \\
+PY6-LHAPDF     & $e$Au, $e$Ag: nPDF only  &           & $\bullet$ & $\bullet$ & $\bullet$ & $\circ$   & $\circ$ \\
+\addlinespace[3pt]
+\multicolumn{8}{@{}l}{\textit{Heavy ions: no fragments, residual nucleus}}\\
+SARTRE         & $e$Au: coherent\ VM      &           & $\bullet$ & $\bullet$ & $\circ$   &           & \\
+SARTRE         & $e$Ag: coherent DDIS     &           & $\bullet$ & $\bullet$ & $\bullet$ &           & \\
+\bottomrule
+\end{tabularx}
+
+\vspace{3pt}
+{\scriptsize\raggedright
+\textbf{Detector regions} (ePIC pre-TDR).
+\textbf{FB}, $\eta<-3.5$: low-$Q^2$ taggers, luminosity monitor (scattered electron only).
+\textbf{Bwd}, backward endcap, $-3.5<\eta<-1.5$: Si/MPGD disks, pfRICH, TOF, PbWO$_4$ EMCal, nHCal.
+\textbf{Bar}, barrel, $|\eta|<1.5$: Si vertex/tracker, MPGDs, hpDIRC, TOF, imaging EMCal (BIC), HCal.
+\textbf{Fwd}, forward endcap, $1.5<\eta<3.5$: tracking disks, dRICH, TOF, W/SciFi EMCal, LFHCAL.
+\textbf{B0}, $\eta\approx4.6$--5.9 (5.5--20\,mrad from the hadron beam): B0 tracker and calorimeter; protons, $\Lambda$, light nuclei.
+\textbf{FF}, $\eta\gtrsim6$ ($<$5\,mrad from the hadron beam): Roman pots and off-momentum detectors (protons, light nuclei); zero-degree calorimeter (neutrons, $\Lambda$).
+\par}
+\end{minipage}
+\par\medskip

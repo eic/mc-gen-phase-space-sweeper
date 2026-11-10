@@ -1,0 +1,54 @@
+Campaign 26.07
+
+PYTHIA8 | Standard $ep$
+    PYTHIA 8                 v=316.1.0      n=29  fb=·0.00 bwd=○0.24 bar=●6.30 fwd=●6.72 b0=○0.29 far=·0.09
+PYTHIA6-EIC | SIDIS
+    PYTHIA 6 eic SIDIS       v=1.3.0        n=10  fb=·0.00 bwd=○0.40 bar=●6.31 fwd=●6.49 b0=○0.20 far=●0.61
+RAPGAP | Diffraction
+    RAPGAP                   v=3.310.2.0    n=4   fb=·0.00 bwd=●1.33 bar=●6.11 fwd=●2.27 b0=·0.03 far=●0.96
+EpIC | DVCS
+    EpIC DVCS                v=1.1.8.1.4    n=24  fb=·0.00 bwd=●1.43 bar=○0.31 fwd=·0.01 b0=·0.01 far=●0.97
+lAger | $J/\psi$
+    lAger                    v=3.7.0.1.1    n=2   fb=·0.00 bwd=●1.23 bar=●1.75 fwd=●0.51 b0=·0.09 far=●0.88
+eSTARlight | $J/\psi$, $\Upsilon$ photoproduction
+    eSTARlight               v=1.3.0.1.0    n=9   fb=●0.89 bwd=·0.09 bar=●1.29 fwd=●0.58 b0=·0.00 far=●1.00
+DEMPgen | Pion form factor
+    DEMPgen pi+n             v=1.2.5        n=6   fb=·0.00 bwd=●0.73 bar=○0.27 fwd=●0.94 b0=·0.00 far=●0.85
+eicMesonSFGen | Kaon structure
+    eicMesonSFGen            v=1.0.0        n=6   fb=·0.00 bwd=·0.05 bar=●1.84 fwd=·0.09 b0=●0.52 far=○0.10
+BeAGLE | $e$D: neutron structure
+    BeAGLE eD DIS            v=1.3.2.3.1    n=2   fb=·0.00 bwd=●1.48 bar=●5.72 fwd=●5.83 b0=○0.14 far=●1.43
+BeAGLE | $e\,^3$He: neutron spin
+    BeAGLE eHe3 DIS          v=1.3.2.3.1    n=3   fb=·0.00 bwd=●0.67 bar=●6.88 fwd=●6.41 b0=·0.00 far=●2.55
+BeAGLE | $e$Au: DIS
+    BeAGLE eAu DIS           v=1.3.2.3.1    n=3   fb=·0.00 bwd=●0.65 bar=●6.87 fwd=●6.09 b0=○0.32 far=●6.69
+BeAGLE | $e$Au: charm
+    BeAGLE eAu charm         v=1.3.2.1.0    n=3   fb=·0.00 bwd=●1.44 bar=●9.48 fwd=●9.48 b0=○0.34 far=○0.25
+BeAGLE | $e$Au: incoherent VM
+    BeAGLE eAu incoh VM      v=1.3.2.3.1    n=1   fb=·0.00 bwd=●1.48 bar=●1.96 fwd=●0.92 b0=·0.09 far=●0.60
+BeAGLE | $e$Ag: DIS
+    BeAGLE eAg DIS           v=1.3.2.3.1    n=2   fb=·0.00 bwd=●1.10 bar=●6.24 fwd=●6.05 b0=○0.16 far=○0.41
+PY6-LHAPDF | $e$Au, $e$Ag: nPDF only
+    PYTHIA6-LHAPDF eAu       v=-            n=3   fb=·0.00 bwd=●1.49 bar=●6.88 fwd=●5.71 b0=○0.34 far=○0.33
+    PYTHIA6-LHAPDF eAg       v=-            n=3   fb=·0.00 bwd=●1.42 bar=●6.59 fwd=●5.86 b0=○0.29 far=○0.39
+SARTRE | $e$Au: coherent\ VM
+    Sartre eAu phi           v=1.39.1.3     n=1   fb=·0.00 bwd=●1.33 bar=●1.51 fwd=○0.12 b0=·0.00 far=·0.00
+    Sartre eAu rho           v=1.39.1.4     n=1   fb=·0.00 bwd=●1.34 bar=●1.54 fwd=·0.09 b0=·0.00 far=·0.00
+SARTRE | $e$Ag: coherent DDIS
+    Sartre eAg DDIS          v=2.20.1.0     n=1   fb=·0.00 bwd=●1.54 bar=●4.30 fwd=●0.81 b0=·0.00 far=·0.00
+
+Rows dropped (no 26.07 data):
+    DJANGOH | With QED radiation
+    BeAGLE | $e$Ca, $e$Pb: incoherent VM
+    BeAGLE | $e$Cu, $e$Ru: DIS
+    eSTARlight | $e$Cu, $e$Ru: coherent\ VM
+    MadGraph5 | ALPs
+
+Omitted:
+    DEMPgen K+Lambda         kaon row uses eicMesonSFGen
+    DJANGOH CC               charged current; table shows NC only
+    EpIC DDVCS               table shows DVCS only
+    EpIC DVMP                table shows DVCS only
+    PYTHIA 6.428 (legacy)    superseded by pythia6-eic
+    PYTHIA 8 charm           HFsim charm; table shows inclusive PYTHIA 8
+    Sartre eAu jpsi          unversioned legacy files mixing coherent and incoherent

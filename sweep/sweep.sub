@@ -1,0 +1,19 @@
+# Phase-space sweep: one job per chunk of EVGEN files (run/<campaign>/in/<chunk>.txt).
+# Submit from the repo root, naming the campaign:
+#   mkdir -p run/26.07/out run/26.07/log && condor_submit CAMPAIGN=26.07 sweep/sweep.sub
+REPO = $ENV(PWD)
+RUN = $(REPO)/run/$(CAMPAIGN)
+universe = vanilla
+executable = $(REPO)/sweep/run.sh
+arguments = $(CAMPAIGN) $(chunk) $(REPO)
+output = $(RUN)/log/$(chunk).out
+error = $(RUN)/log/$(chunk).err
+log = $(RUN)/log/sweep.log
+accounting_group = group_eic
+accounting_group_user = rahmans
+# Peak RSS: 541 MB for the all-background chunk c0000 (26.07); median about 50 MB in the 2026-10-25 sweep.
+# The 3 GB peaks then came from whole ASCII HepMC files, which this sweep no longer reads.
+request_memory = 1000
+getenv = False
+max_retries = 2
+queue chunk from $(RUN)/chunks.txt
