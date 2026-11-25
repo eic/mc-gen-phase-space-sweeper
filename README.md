@@ -8,7 +8,7 @@ The table is pinned to **the EVGEN files a given production campaign actually
 consumed**. The campaign is a parameter, `C` below, such as `26.07`, `26.04.1` or
 `25.12.0`: any name the PCS catalog API knows. Each campaign keeps its own pins, sweep
 outputs and table, so several can sit side by side. The committed one is 26.07.
-History and decisions are in `NOTES.md`.
+Decisions and results are in `NOTES.md`.
 
 ## Layout
 
@@ -53,7 +53,7 @@ Steps 1 and 3 need Rucio/xrootd, so run them in eic-shell. The default
 read-only config (account `eicread`) is enough:
 
     C=26.07
-    ES=/gpfs02/eic/rahmans/container/eic-shell
+    ES=/path/to/eic-shell        # your eic-shell launcher
     RUCIO_ENV='unset BEARER_TOKEN BEARER_TOKEN_FILE RUCIO_CONFIG'
 
 1. **Pin** (about 2 min). Skip this step to reuse the committed lock file.

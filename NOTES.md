@@ -4,28 +4,22 @@ The README covers how to run things. This file records why the table is the way
 it is. Everything here is either produced by the sweep or encoded in
 `sweep/markers.py` / `table/spec.py`.
 
-## Origin
+## Inputs
 
-- **Merged from** `/gpfs02/eic/rahmans/mc_gen_sweep/` (sweep and table code) on 2026-11-10.
-  - The assessment write-up in `epic-prod-dev/Monte Carlo Generator assessment/` (docs, LaTeX
-    summaries, a 28-file pilot study, an unpinned full-tree sweep) is **not** included,
-    because this stack doesn't reproduce it.
-  - Both originals are unchanged on disk.
-- **The sweep used to read** "every `.hepmc3.tree.root` under EVGEN" (xrootd listing plus
-  `simulation_campaign_datasets@99a906b`, which has no campaign tags).
-  - It now reads only the EVGEN files a campaign consumed (`pins/<campaign>/`).
+- **The sweep reads** only the EVGEN files a campaign consumed (`pins/<campaign>/`), not
+  every `.hepmc3.tree.root` under EVGEN: a full-tree listing has no campaign tags.
   - The PCS status-grids page needs a login; the catalog JSON behind it is public, so the catalog is what gets pinned.
 - **Files are read** from `/jlab-osdf-ro/eic/EPIC/cache/EVGEN` on dtn2304 (the Rucio PFN base for EIC-XRD).
 - **Container:** `eic_xl:26.10-stable`. `run.sh` refuses to run if the tag points to a
   different image digest.
 
-## Table decisions (from the user, encoded in markers.py / spec.py)
+## Table decisions (encoded in markers.py / spec.py)
 
 - **Files:** only `.hepmc3.tree.root`; TCSGen and beam backgrounds are excluded.
 - **Latest sample only:** the highest generator version within each generator + target + process, among the samples the campaign ran.
 - **Ions:** Ag and the other ions are shown individually.
 - **Layout:** the table fits in one column and is readable for non-experts.
-- **Heavy-ion group names** (the user's wording): "nuclear fragments", "no fragments, no
+- **Heavy-ion group names:** "nuclear fragments", "no fragments, no
   residual nucleus", "no fragments, residual nucleus".
 - **Footnote:** ends at the detector descriptions.
 - **Sartre J/ψ is omitted:** only legacy, unversioned files exist, and they mix coherent and incoherent events.
@@ -37,7 +31,7 @@ it is. Everything here is either produced by the sweep or encoded in
 - **Lock:** 334 non-gun RECO/FULL output datasets → 204 EVGEN datasets, 11,524 files, 0 unresolved.
   77 of those datasets have no Rucio dataset and are pinned by size and mtime from xrootd.
 - **Sweep:** 430 files (3 per dataset), 830k events, 0 errors.
-  47 chunks ran on HTCondor (cluster 320703); the 7 still idle ran on eicsub01 with the same `run.sh`.
+  47 chunks ran on HTCondor (cluster 320703); the 7 still idle ran on the submit node with the same `run.sh`.
 - **Memory:** 1 GB per job is enough. Peak RSS was 541 MB (all-background chunk c0000).
 - **Rows 26.07 has no sample for:** DJANGOH NC (QED radiation), BeAGLE eCa/ePb incoherent VM,
   BeAGLE eCu/eRu DIS, eSTARlight eCu/eRu, MadGraph5 ALPs.

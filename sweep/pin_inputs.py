@@ -19,7 +19,7 @@ different lock only if the campaign produced more outputs (diff it to see).
 Run inside eic-shell (needs the rucio client; uses the default read-only
 /opt/rucio/etc/rucio.cfg, account eicread):
   printf '%s\n' "unset BEARER_TOKEN BEARER_TOKEN_FILE RUCIO_CONFIG; python3 sweep/pin_inputs.py 26.07" \
-      | /gpfs02/eic/rahmans/container/eic-shell
+      | /path/to/eic-shell
 """
 import argparse
 import collections
