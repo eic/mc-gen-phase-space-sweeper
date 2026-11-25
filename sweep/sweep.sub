@@ -10,7 +10,6 @@ output = $(RUN)/log/$(chunk).out
 error = $(RUN)/log/$(chunk).err
 log = $(RUN)/log/sweep.log
 accounting_group = group_eic
-accounting_group_user = rahmans
 # Peak RSS: 541 MB for the all-background chunk c0000 (26.07); median about 50 MB in the 2026-10-25 sweep.
 # The 3 GB peaks then came from whole ASCII HepMC files, which this sweep no longer reads.
 request_memory = 1000
